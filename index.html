@@ -69,25 +69,35 @@
 저장됩니다. 앱은 자체 서버를 운영하지 않으며, 사용자의 일정 데이터나 개인정보를 외부 서버로 전송하거나 제3자와 공유하지 않습니다.
 </p>
 <p>
-앱은 별도의 회원가입/로그인 기능을 제공하지 않으며, 광고 SDK나 분석(Analytics) SDK를 포함하지 않습니다.
+앱은 별도의 회원가입/로그인 기능을 제공하지 않으며, 광고 SDK나 사용자 행태를 추적하는 분석(Analytics) SDK를 포함하지 않습니다.
 </p>
 
-<h2>4. 위치 정보</h2>
+<h2>4. 크래시 리포팅(진단 데이터)</h2>
+<p>
+앱은 오류 발생 시 원인을 파악하기 위해 <strong>Firebase Crashlytics</strong>(Google)를 사용합니다. 앱이 예기치 않게 종료되면
+발생 시각, 기기 모델/OS 버전, 오류가 발생한 코드 위치(스택 트레이스) 등 <strong>진단 정보</strong>가 자동으로 Google 서버에 전송됩니다.
+</p>
+<p>
+이 진단 정보에는 사용자의 일정 제목·내용·장소 등 캘린더 데이터가 포함되지 않으며, 오직 앱 품질 개선(버그 수정) 목적으로만 사용됩니다.
+자세한 처리 방식은 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>을 참고해 주세요.
+</p>
+
+<h2>5. 위치 정보</h2>
 <p>
 일정에 장소를 첨부하는 기능은 지도를 표시하고 주소를 검색하는 용도로만 사용되며, 앱은 기기의 위치 권한(GPS 등)을 요청하지 않습니다.
 </p>
 
-<h2>5. 아동의 개인정보</h2>
+<h2>6. 아동의 개인정보</h2>
 <p>
 본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동으로부터 고의로 개인정보를 수집하지 않습니다.
 </p>
 
-<h2>6. 개인정보처리방침의 변경</h2>
+<h2>7. 개인정보처리방침의 변경</h2>
 <p>
 본 방침은 앱 기능 변경 등에 따라 개정될 수 있으며, 변경 시 이 페이지의 "최종 수정일"을 갱신합니다.
 </p>
 
-<h2>7. 문의처</h2>
+<h2>8. 문의처</h2>
 <p>
 개인정보처리방침 또는 앱 관련 문의사항은 아래 이메일로 연락해 주세요.<br>
 이메일: <a href="mailto:parkho79@gmail.com">parkho79@gmail.com</a>
@@ -117,7 +127,20 @@ information the app handles and how.
 <p>
 All calendar data (titles, times, locations, reminders) is stored locally on your device via Android's Calendar
 Provider. The app does not operate its own backend server and does not transmit or share your event data or
-personal information with any third party. The app has no login/account system, no ad SDKs, and no analytics SDKs.
+personal information with any third party. The app has no login/account system, no ad SDKs, and no behavioral analytics SDKs.
+</p>
+
+<h2>Crash Reporting (Diagnostic Data)</h2>
+<p>
+The app uses <strong>Firebase Crashlytics</strong> (Google) to diagnose errors. If the app crashes unexpectedly, diagnostic
+information — timestamp, device model/OS version, and the stack trace of where the error occurred — is automatically sent
+to Google's servers.
+</p>
+<p>
+This diagnostic data does not include your calendar content (event titles, descriptions, locations, etc.) and is used
+solely to improve app quality (bug fixes). See
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's Privacy and Security policy</a>
+for details on how this data is handled.
 </p>
 
 <h2>Location</h2>
